@@ -12,23 +12,30 @@ image {
   margin: 0px;
 }
 
-.users {
-  gap: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 75%;
+.user-container {
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.user-container {
-  border: 1px solid gainsboro;
-  width: 20%;
+.user-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.user {
+  border: 1px solid #ccc;
+  width: 280px;
+  overflow: hidden;
 }
 
 .user-image {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
+  max-width: fit-content;
 }
 
 .user-name {
