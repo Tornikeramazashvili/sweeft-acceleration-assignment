@@ -11,7 +11,10 @@ function App() {
   const getAllUsers = () => {
     axios.get(`http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/1/10&offset=${offset}`).then(({ data }) => {
       const newUser = [];
-      data.list.forEach((u) => newUser.push(u.name));
+      data.list.forEach((user) => {
+        const { imageUrl, prefix, name, lastName, title } = user;
+        newUser.push({ imageUrl, prefix, name, lastName, title });
+      });
       setUsers(olduser => [...olduser, ...newUser])
     });
     offset += 10;
@@ -33,12 +36,14 @@ function App() {
 
   return (
     <>
-      <div>
-        <ol>
-          {users.map((u, i) => (
-            <li className='li' key={i}>{u}</li>
-          ))}
-        </ol>
+      <div className='users'>
+        {users.map((user, index) => (
+          <div key={index} className='user-container'>
+            <img className='user-image' src={user.imageUrl} alt='user' />
+            <p className='user-name'> {user.prefix} {user.name} {user.lastName}</p>
+            <p className='user-title'>{user.title}</p>
+          </div>
+        ))}
       </div>
     </>
   );
