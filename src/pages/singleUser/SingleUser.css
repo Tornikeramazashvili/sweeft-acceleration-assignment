@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
 }
 
@@ -32,24 +32,14 @@
   text-decoration: underline;
 }
 
-.single-user-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 10px;
-  align-items: center;
-}
-
 .single-user-inf-container {
-  border: 1px solid black;
+  border: 2px solid #818181;
   width: 100%;
-  padding: 10px 0px 10px 10px;
+  padding: 10px 0px 10px 12px;
 }
 
 .single-user-inf {
-  margin-top: 16px;
+  margin: 16px 0px 0px;
 }
 
 .single-user-name {
@@ -65,11 +55,11 @@
 }
 
 .single-user-adr-container {
+  padding: 8px 12px;
+  line-height: 22px;
   width: fit-content;
-  border: 1px solid black;
-  padding: 8px 10px;
+  border: 2px solid #818181;
   overflow: hidden;
-  font-size: 16px;
   cursor: default;
 }
 
