@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 
 import './SingleUser.css'
-
+import { Friends } from '../friends/Friends';
 
 export const SingleUser = () => {
   const { id } = useParams();
@@ -14,8 +14,6 @@ export const SingleUser = () => {
       const response = await fetch(`http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${id}`);
       const userData = await response.json();
       setSingleUser(userData);
-
-
     };
     fetchUser();
   }, [id]);
@@ -81,7 +79,12 @@ export const SingleUser = () => {
           </div>
         </div>
       </div>
+      <div className='friends-container'>
+        <p className='friends-title'>Friends:</p>
+        <Friends userId={id} />
+      </div>
     </>
+
   )
 }
 

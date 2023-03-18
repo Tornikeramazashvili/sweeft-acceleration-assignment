@@ -2,17 +2,16 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-
 import './Users.css';
 
 export const Users = () => {
 
+    const navigate = useNavigate();
     const [users, setUsers] = useState([]);
     const [offset, setOffset] = useState(1);
     const [size, setSize] = useState(10);
     const URL = 'http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user'
-    const navigate = useNavigate();
-
+    
     const getAllUsers = async () => {
         const { data } = await axios.get(`${URL}/${offset}/${size}`);
         const newUser = data.list.map(({ id, imageUrl, prefix, name, lastName, title }) => ({ id, imageUrl, prefix, name, lastName, title }));

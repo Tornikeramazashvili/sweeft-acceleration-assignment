@@ -66,3 +66,16 @@
 .single-user-address {
   font-weight: bold;
 }
+
+.friends-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.friends-title{
+  margin-bottom: 20px;
+}
