@@ -9,12 +9,12 @@
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 18px;
 }
 
 .friend-img {
   width: 100%;
-  max-width: 278px;
+  max-width: 276px;
   object-fit: cover;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .friend-title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 100;
   padding: 2px 10px;
 }

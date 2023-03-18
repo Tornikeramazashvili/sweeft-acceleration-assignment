@@ -1,16 +1,23 @@
-.single-user-container {
-  display: flex;
-  justify-content: center;
+.user-and-friends-container {
+  border: 1px solid #bbbbbb;
   width: 100%;
   max-width: 1200px;
+  margin: -10px auto;
+  border-top: none;
+  border-bottom: none;
+  padding: 10px;
+}
+
+.single-user-container {
+  width: 97%;
+  display: flex;
   margin: 0 auto;
-  gap: 10px;
+  gap: 6px;
   align-items: center;
 }
 
 .single-user-img {
-  width: 100%;
-  max-width: 480px;
+  max-width: 256px;
   object-fit: cover;
 }
 
@@ -19,6 +26,7 @@
   border: 1px solid black;
   width: 100%;
   padding: 10px 0px 10px 10px;
+  margin-left: 14px;
 }
 
 .single-user-inf {
@@ -76,6 +84,6 @@
   font-weight: bold;
 }
 
-.friends-title{
+.friends-title {
   margin-bottom: 20px;
 }

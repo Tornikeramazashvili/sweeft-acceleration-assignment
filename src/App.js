@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Users } from './pages/users/Users'
 import { SingleUser } from './pages/singleUser/SingleUser'
 import { Friends } from './pages/friends/Friends'
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Users />} />
         <Route path="/user/:id" element={<SingleUser />} />
-        <Route path="/user/:id/friends" element={<Friends />} />
+        <Route path="/user/:id" element={<Friends />} />
       </Routes>
     </BrowserRouter>
   )

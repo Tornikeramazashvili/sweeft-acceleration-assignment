@@ -11,7 +11,7 @@ export const Users = () => {
     const [offset, setOffset] = useState(1);
     const [size, setSize] = useState(10);
     const URL = 'http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user'
-    
+
     const getAllUsers = async () => {
         const { data } = await axios.get(`${URL}/${offset}/${size}`);
         const newUser = data.list.map(({ id, imageUrl, prefix, name, lastName, title }) => ({ id, imageUrl, prefix, name, lastName, title }));
